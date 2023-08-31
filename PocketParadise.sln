@@ -5,6 +5,12 @@ VisualStudioVersion = 17.8.34004.107
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketParadise", "PocketParadise\PocketParadise.csproj", "{CF67146D-027F-4D69-BC93-333858204C0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketParadise.DataAccess", "PocketParadise.DataAccess\PocketParadise.DataAccess.csproj", "{3567F7D1-FE9F-40B3-BD50-CA1461C69951}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketParadise.Models", "PocketParadise.Models\PocketParadise.Models.csproj", "{2F033912-369F-456E-8AF9-5939EEFF1813}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocketParadise.Utility", "PocketParadise.Utility\PocketParadise.Utility.csproj", "{5CA41460-3D26-43A0-8CB2-9278A17306CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{CF67146D-027F-4D69-BC93-333858204C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF67146D-027F-4D69-BC93-333858204C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF67146D-027F-4D69-BC93-333858204C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3567F7D1-FE9F-40B3-BD50-CA1461C69951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3567F7D1-FE9F-40B3-BD50-CA1461C69951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3567F7D1-FE9F-40B3-BD50-CA1461C69951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3567F7D1-FE9F-40B3-BD50-CA1461C69951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F033912-369F-456E-8AF9-5939EEFF1813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F033912-369F-456E-8AF9-5939EEFF1813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F033912-369F-456E-8AF9-5939EEFF1813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F033912-369F-456E-8AF9-5939EEFF1813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA41460-3D26-43A0-8CB2-9278A17306CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA41460-3D26-43A0-8CB2-9278A17306CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA41460-3D26-43A0-8CB2-9278A17306CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA41460-3D26-43A0-8CB2-9278A17306CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
