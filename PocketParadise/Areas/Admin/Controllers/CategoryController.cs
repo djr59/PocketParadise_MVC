@@ -2,10 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using PocketParadise.DataAccess.Data;
 using PocketParadise.Models;
+using Microsoft.AspNetCore.Authorization;
+using PocketParadise.Utility;
 
 namespace PocketParadise.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
