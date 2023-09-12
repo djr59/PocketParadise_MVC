@@ -6,6 +6,7 @@ using PocketParadise.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using PocketParadise.Utility;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,13 +18,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options=>
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 builder.Services.ConfigureApplicationCookie(options => {
     options.LoginPath = $"/Identity/Account/Login";
     options.LogoutPath = $"/Identity/Account/Logout";
     options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
 });
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmailSender,EmailSender>();
@@ -40,6 +42,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
 app.UseRouting();
 app.UseAuthentication();

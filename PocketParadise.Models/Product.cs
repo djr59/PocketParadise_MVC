@@ -20,7 +20,7 @@ namespace PocketParadise.Models
         public string Description { get; set; }
         [Required]
         [Range(0, 5000)]
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         [Required]
         public int Quantity { get; set; }
         public int CategoryId { get; set; }
