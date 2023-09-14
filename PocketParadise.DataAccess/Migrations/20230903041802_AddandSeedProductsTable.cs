@@ -29,7 +29,7 @@ namespace PocketParadise.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -42,11 +42,11 @@ namespace PocketParadise.DataAccess.Migrations
                 columns: new[] { "Id", "Description", "Price", "Quantity", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Its a cute pikachu HUH", 70.00m, 2, "Pikachu Cube" },
-                    { 2, "Latest 5G smartphone with three cameras", 40.00m, 3, "Alolan Vulpix Dome" },
-                    { 3, "Ergonomic chair with lumbar support", 20.00m, 1, "Vaporeon Mini Cube" },
-                    { 4, "Noise-cancelling over-the-ear headphones", 500.00m, 1, "Eeveelutions Big Boy" },
-                    { 5, "Waterproof smartwatch with heart rate monitor", 15.00m, 4, "Mitsu Charm" }
+                    { 1, "Its a cute pikachu HUH", 70.00, 2, "Pikachu Cube" },
+                    { 2, "Latest 5G smartphone with three cameras", 40.00, 3, "Alolan Vulpix Dome" },
+                    { 3, "Ergonomic chair with lumbar support", 20.00, 1, "Vaporeon Mini Cube" },
+                    { 4, "Noise-cancelling over-the-ear headphones", 500.00, 1, "Eeveelutions Big Boy" },
+                    { 5, "Waterproof smartwatch with heart rate monitor", 15.00, 4, "Mitsu Charm" }
                 });
         }
 
